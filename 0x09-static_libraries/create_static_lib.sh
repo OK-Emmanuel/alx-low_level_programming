@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Compile all .c files and create a static library
 gcc -c *.c
 ar rc liball.a *.o
-ranlib liball.a
+
+# Clean up the temporary object files
+rm *.o
